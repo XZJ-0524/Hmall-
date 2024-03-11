@@ -1,0 +1,25 @@
+server:
+  port: 8083
+feign:
+  okhttp:
+    enabled: true #开启OKHttp连接池
+  sentinel:
+    enabled: true #开启feign对sentinel的整合
+hm:
+  db:
+    database: hm-trade
+  swagger:
+    title: " 商城订单接口文档"
+    package: com.hmall.order.controller
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
+  rabbitmq:
+    host: 192.168.232.128
+    port: 5672
+    virtual-host: /hmall
+    username: xzj
+    password: 123
